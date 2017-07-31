@@ -26,7 +26,7 @@ config/database.yml
 config/application.yml
 config/database.yml
 config/secrets.yml
-/log/development.log
+log/development.log
 
 
 # dotenv
