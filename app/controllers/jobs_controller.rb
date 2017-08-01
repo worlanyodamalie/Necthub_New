@@ -2,9 +2,10 @@ class JobsController < ApplicationController
   before_action :authenticate_organisation!
 
   layout "organisations"
+
   layout "users", :only => [:jobsearch]
 
-  
+
 
   def index
     @jobs = current_organisation.jobs.all
