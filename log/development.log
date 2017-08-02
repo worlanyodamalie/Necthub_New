@@ -2924,3 +2924,14 @@ Processing by FundraisingsController#index as HTML
 Completed 200 OK in 74ms (Views: 59.5ms | ActiveRecord: 2.4ms)
 
 
+Started GET "/fundraisings" for 127.0.0.1 at 2017-08-01 22:25:42 +0000
+Processing by FundraisingsController#index as HTML
+  [1m[36mOrganisation Load (0.8ms)[0m  [1m[34mSELECT  "organisations".* FROM "organisations" WHERE "organisations"."id" = $1 ORDER BY "organisations"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fundraisings/index.html.erb within layouts/organisations
+  [1m[36mFundraising Load (0.5ms)[0m  [1m[34mSELECT "fundraisings".* FROM "fundraisings" WHERE "fundraisings"."organisation_id" = $1[0m  [["organisation_id", 1]]
+  Rendered fundraisings/index.html.erb within layouts/organisations (8.8ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_topnavbar.html.erb (1.5ms)
+Completed 200 OK in 61ms (Views: 44.8ms | ActiveRecord: 1.2ms)
+
+
