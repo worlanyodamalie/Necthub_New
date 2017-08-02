@@ -23,13 +23,12 @@ config/database.yml
 # Ignore Byebug command history file.
 .byebug_history
 
-config/application.yml
-config/database.yml
-config/secrets.yml
-log/development.log
-
-
-# dotenv
-# TODO Comment out this rule if environment variables can be committed
-.env
-
+readyrails.box
+Vagrantfile
+.vagrant/
+# config/application.yml
+# config/database.yml
+size.sh
+purge.sh
+find_fattest.sh
+/log/development.log
