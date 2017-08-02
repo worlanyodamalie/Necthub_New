@@ -2935,3 +2935,110 @@ Processing by FundraisingsController#index as HTML
 Completed 200 OK in 61ms (Views: 44.8ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/fundraisings" for 127.0.0.1 at 2017-08-02 09:09:34 +0000
+Processing by FundraisingsController#index as HTML
+  [1m[36mOrganisation Load (49.2ms)[0m  [1m[34mSELECT  "organisations".* FROM "organisations" WHERE "organisations"."id" = $1 ORDER BY "organisations"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fundraisings/index.html.erb within layouts/organisations
+  [1m[36mFundraising Load (15.3ms)[0m  [1m[34mSELECT "fundraisings".* FROM "fundraisings" WHERE "fundraisings"."organisation_id" = $1[0m  [["organisation_id", 1]]
+  Rendered fundraisings/index.html.erb within layouts/organisations (131.1ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_topnavbar.html.erb (1.5ms)
+Completed 200 OK in 4495ms (Views: 3211.0ms | ActiveRecord: 874.8ms)
+
+
+Started GET "/organisations/sign_out" for 127.0.0.1 at 2017-08-02 09:09:42 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mOrganisation Load (1.1ms)[0m  [1m[34mSELECT  "organisations".* FROM "organisations" WHERE "organisations"."id" = $1 ORDER BY "organisations"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (36.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 184ms (ActiveRecord: 44.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-02 09:09:42 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 48ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2017-08-02 09:09:46 +0000
+Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-02 09:09:46 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-02 09:09:53 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/organisations/sign_up" for 127.0.0.1 at 2017-08-02 09:09:56 +0000
+Processing by RegistrationsController#new as HTML
+  Rendering organisations/registrations/new.html.erb within layouts/application
+  Rendered organisations/shared/_links.html.erb (1.2ms)
+  Rendered organisations/registrations/new.html.erb within layouts/application (73.0ms)
+Completed 200 OK in 136ms (Views: 129.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/organisations/sign_in" for 127.0.0.1 at 2017-08-02 09:09:59 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering organisations/sessions/new.html.erb within layouts/application
+  Rendered organisations/shared/_links.html.erb (3.4ms)
+  Rendered organisations/sessions/new.html.erb within layouts/application (55.3ms)
+Completed 200 OK in 110ms (Views: 95.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/organisations/sign_in" for 127.0.0.1 at 2017-08-02 09:10:04 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "organisation"=>{"email"=>"owass@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mOrganisation Load (0.8ms)[0m  [1m[34mSELECT  "organisations".* FROM "organisations" WHERE "organisations"."email" = $1 ORDER BY "organisations"."id" ASC LIMIT $2[0m  [["email", "owass@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "organisations" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "organisations"."id" = $5[0m  [["current_sign_in_at", "2017-08-02 09:10:05.180242"], ["last_sign_in_at", "2017-08-01 20:44:56.569739"], ["sign_in_count", 18], ["updated_at", "2017-08-02 09:10:05.181988"], ["id", 1]]
+  [1m[35m (13.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 278ms (ActiveRecord: 15.3ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-08-02 09:10:05 +0000
+Processing by OrganisationsController#index as HTML
+  [1m[36mOrganisation Load (0.4ms)[0m  [1m[34mSELECT  "organisations".* FROM "organisations" WHERE "organisations"."id" = $1 ORDER BY "organisations"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering organisations/index.html.erb within layouts/organisations
+  [1m[35m (51.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "membershipdata" WHERE "membershipdata"."organisation_id" = $1[0m  [["organisation_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "fundraisings" WHERE "fundraisings"."organisation_id" = $1[0m  [["organisation_id", 1]]
+  [1m[35m (36.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "events" WHERE "events"."organisation_id" = $1[0m  [["organisation_id", 1]]
+  Rendered organisations/index.html.erb within layouts/organisations (177.7ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_topnavbar.html.erb (0.9ms)
+Completed 200 OK in 237ms (Views: 116.5ms | ActiveRecord: 93.6ms)
+
+
+Started GET "/organisations/sign_out" for 127.0.0.1 at 2017-08-02 09:10:33 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mOrganisation Load (0.5ms)[0m  [1m[34mSELECT  "organisations".* FROM "organisations" WHERE "organisations"."id" = $1 ORDER BY "organisations"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-02 09:10:33 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
