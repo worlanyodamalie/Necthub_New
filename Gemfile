@@ -51,7 +51,12 @@ gem 'devise'
 gem 'awesome_print', require:"ap"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# Carrierwave for image upload and resizing
 gem 'carrierwave'
+
+# Cloudinary gem
+gem 'cloudinary'
 
 gem 'mini_magick'
 
