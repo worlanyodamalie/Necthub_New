@@ -3180,3 +3180,492 @@ Completed 200 OK in 23ms (Views: 15.6ms | ActiveRecord: 0.0ms)
 
 
 >>>>>>> 56e37cacc20d8b820d80b2a1362ae36afc88d16c
+Started GET "/" for 127.0.0.1 at 2017-10-27 08:03:58 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 9188ms (Views: 9156.5ms)
+
+
+Started GET "/assets/application-3628cfec66e5dc7ecfee93ef2bfc36fb1e7b745b84e868b29cc31cb6c7d0d8c1.css" for 127.0.0.1 at 2017-10-27 08:04:08 +0000
+Started GET "/assets/application-6a0a4c1948e26fc01c3115def2a48c29fe70e51216546f2fe25cd86aa8dc4b47.js" for 127.0.0.1 at 2017-10-27 08:04:08 +0000
+Started GET "/organisations/sign_up" for 127.0.0.1 at 2017-10-27 08:04:12 +0000
+Processing by RegistrationsController#new as HTML
+Completed 500 Internal Server Error in 18ms
+
+
+
+PG::ConnectionBad - FATAL:  database "Necthub_development" does not exist
+:
+  pg (0.21.0) lib/pg.rb:56:in `connect'
+  activerecord (5.0.4) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
+  activerecord (5.0.4) lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+  activerecord (5.0.4) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+  activerecord (5.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:729:in `new_connection'
+  activerecord (5.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:773:in `checkout_new_connection'
+  activerecord (5.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:752:in `try_to_checkout_new_connection'
+  activerecord (5.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:713:in `acquire_connection'
+  activerecord (5.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:490:in `checkout'
+  activerecord (5.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+  activerecord (5.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:883:in `retrieve_connection'
+  activerecord (5.0.4) lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+  activerecord (5.0.4) lib/active_record/connection_handling.rb:91:in `connection'
+  activerecord (5.0.4) lib/active_record/model_schema.rb:462:in `load_schema!'
+  activerecord (5.0.4) lib/active_record/attributes.rb:233:in `load_schema!'
+  activerecord (5.0.4) lib/active_record/attribute_decorators.rb:28:in `load_schema!'
+  activerecord (5.0.4) lib/active_record/model_schema.rb:455:in `block in load_schema'
+  /home/worlanyo/.rbenv/versions/2.4.0/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (5.0.4) lib/active_record/model_schema.rb:452:in `load_schema'
+  activerecord (5.0.4) lib/active_record/model_schema.rb:353:in `attribute_types'
+  activerecord (5.0.4) lib/active_record/attribute_methods.rb:179:in `has_attribute?'
+  activerecord (5.0.4) lib/active_record/inheritance.rb:54:in `new'
+  devise (4.3.0) lib/devise/models/registerable.rb:20:in `new_with_session'
+  devise (4.3.0) app/controllers/devise/registrations_controller.rb:101:in `build_resource'
+  devise (4.3.0) app/controllers/devise/registrations_controller.rb:8:in `new'
+  actionpack (5.0.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.0.4) lib/abstract_controller/base.rb:188:in `process_action'
+  actionpack (5.0.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.0.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.0.4) lib/active_support/callbacks.rb:126:in `call'
+  activesupport (5.0.4) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+  activesupport (5.0.4) lib/active_support/callbacks.rb:455:in `call'
+  activesupport (5.0.4) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+  activesupport (5.0.4) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+  activesupport (5.0.4) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.0.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.0.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.0.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (5.0.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.0.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (5.0.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.0.4) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+  activerecord (5.0.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (5.0.4) lib/abstract_controller/base.rb:126:in `process'
+  actionview (5.0.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.0.4) lib/action_controller/metal.rb:190:in `dispatch'
+  actionpack (5.0.4) lib/action_controller/metal.rb:262:in `dispatch'
+  actionpack (5.0.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+  actionpack (5.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+  actionpack (5.0.4) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+  actionpack (5.0.4) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+  actionpack (5.0.4) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+  actionpack (5.0.4) lib/action_dispatch/journey/router.rb:26:in `serve'
+  actionpack (5.0.4) lib/action_dispatch/routing/route_set.rb:725:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.0.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  actionpack (5.0.4) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+  activesupport (5.0.4) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  activesupport (5.0.4) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+  activesupport (5.0.4) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.4) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+  actionpack (5.0.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+  actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.0.4) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/17143ca00fe3df4b/variables" for 127.0.0.1 at 2017-10-27 08:04:12 +0000
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (106.3ms)[0m  [1m[35mCREATE TABLE "announcements" ("id" serial primary key, "title" character varying, "description" character varying, "organisation_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (49.1ms)[0m  [1m[35mCREATE  INDEX  "index_announcements_on_organisation_id" ON "announcements" USING btree ("organisation_id")[0m
+  [1m[35m (86.2ms)[0m  [1m[35mCREATE TABLE "events" ("id" serial primary key, "event_name" character varying, "event_type" character varying, "event_date" timestamp, "organisation_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "event_pic" character varying)[0m
+  [1m[35m (51.8ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_organisation_id" ON "events" USING btree ("organisation_id")[0m
+  [1m[35m (97.2ms)[0m  [1m[35mCREATE TABLE "fundraisings" ("id" serial primary key, "title" character varying, "description" character varying, "city" character varying, "country" character varying, "campaign_duration" character varying, "organisation_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "campaign_pic" character varying)[0m
+  [1m[35m (49.4ms)[0m  [1m[35mCREATE  INDEX  "index_fundraisings_on_organisation_id" ON "fundraisings" USING btree ("organisation_id")[0m
+  [1m[35m (86.0ms)[0m  [1m[35mCREATE TABLE "groups" ("id" serial primary key, "group_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer, "organisation_id" integer)[0m
+  [1m[35m (50.6ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_organisation_id" ON "groups" USING btree ("organisation_id")[0m
+  [1m[35m (51.7ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_user_id" ON "groups" USING btree ("user_id")[0m
+  [1m[35m (84.9ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" serial primary key, "company_name" character varying, "position" character varying, "job_description" character varying, "organisation_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (50.1ms)[0m  [1m[35mCREATE  INDEX  "index_jobs_on_organisation_id" ON "jobs" USING btree ("organisation_id")[0m
+  [1m[35m (85.3ms)[0m  [1m[35mCREATE TABLE "membershipdata" ("id" serial primary key, "FirstName" character varying, "LastName" character varying, "YearCompleted" character varying, "Email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "organisation_id" integer, "Organisation" character varying, "WorkPlace" character varying, "PhoneNumber" character varying)[0m
+  [1m[35m (50.1ms)[0m  [1m[35mCREATE  INDEX  "index_membershipdata_on_organisation_id" ON "membershipdata" USING btree ("organisation_id")[0m
+  [1m[35m (104.9ms)[0m  [1m[35mCREATE TABLE "organisations" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "organisation_name" character varying)[0m
+  [1m[35m (49.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_organisations_on_email" ON "organisations" USING btree ("email")[0m
+  [1m[35m (39.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_organisations_on_reset_password_token" ON "organisations" USING btree ("reset_password_token")[0m
+  [1m[35m (93.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "first_name" character varying, "Last_name" character varying, "organisation_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "phone_number" character varying, "profession" character varying, "education" character varying, "skills" character varying, "user_pic" character varying, "YearGroup" character varying)[0m
+  [1m[35m (61.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (50.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (9.8ms)[0m  [1m[35mALTER TABLE "announcements" ADD CONSTRAINT "fk_rails_380d9b2e4b"
+FOREIGN KEY ("organisation_id")
+  REFERENCES "organisations" ("id")
+[0m
+  [1m[35m (10.2ms)[0m  [1m[35mALTER TABLE "events" ADD CONSTRAINT "fk_rails_69d23b5b85"
+FOREIGN KEY ("organisation_id")
+  REFERENCES "organisations" ("id")
+[0m
+  [1m[35m (10.4ms)[0m  [1m[35mALTER TABLE "fundraisings" ADD CONSTRAINT "fk_rails_187001e095"
+FOREIGN KEY ("organisation_id")
+  REFERENCES "organisations" ("id")
+[0m
+  [1m[35m (10.2ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_32205fdfff"
+FOREIGN KEY ("organisation_id")
+  REFERENCES "organisations" ("id")
+[0m
+  [1m[35m (10.5ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_5e78cd340a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (10.5ms)[0m  [1m[35mALTER TABLE "jobs" ADD CONSTRAINT "fk_rails_c6374488d9"
+FOREIGN KEY ("organisation_id")
+  REFERENCES "organisations" ("id")
+[0m
+  [1m[35m (10.1ms)[0m  [1m[35mALTER TABLE "membershipdata" ADD CONSTRAINT "fk_rails_75dc3e98aa"
+FOREIGN KEY ("organisation_id")
+  REFERENCES "organisations" ("id")
+[0m
+  [1m[35m (109.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170727202948)[0m
+  [1m[35m (10.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170722161605),
+(20170702164230),
+(20170727183141),
+(20170702163743),
+(20170717140933),
+(20170727183003),
+(20170726162615),
+(20170708140700),
+(20170726133613),
+(20170708115843),
+(20170722160856),
+(20170708122219),
+(20170708140205),
+(20170708115436),
+(20170726212038),
+(20170702161839),
+(20170708120727),
+(20170716131818),
+(20170709075527),
+(20170702164030),
+(20170717053501);
+
+[0m
+  [1m[35m (83.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-27 08:05:12.389191"], ["updated_at", "2017-10-27 08:05:12.389191"]]
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (94.9ms)[0m  [1m[35mCREATE TABLE "announcements" ("id" serial primary key, "title" character varying, "description" character varying, "organisation_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (50.1ms)[0m  [1m[35mCREATE  INDEX  "index_announcements_on_organisation_id" ON "announcements" USING btree ("organisation_id")[0m
+  [1m[35m (96.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" serial primary key, "event_name" character varying, "event_type" character varying, "event_date" timestamp, "organisation_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "event_pic" character varying)[0m
+  [1m[35m (51.4ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_organisation_id" ON "events" USING btree ("organisation_id")[0m
+  [1m[35m (241.2ms)[0m  [1m[35mCREATE TABLE "fundraisings" ("id" serial primary key, "title" character varying, "description" character varying, "city" character varying, "country" character varying, "campaign_duration" character varying, "organisation_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "campaign_pic" character varying)[0m
+  [1m[35m (73.3ms)[0m  [1m[35mCREATE  INDEX  "index_fundraisings_on_organisation_id" ON "fundraisings" USING btree ("organisation_id")[0m
+  [1m[35m (86.1ms)[0m  [1m[35mCREATE TABLE "groups" ("id" serial primary key, "group_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer, "organisation_id" integer)[0m
+  [1m[35m (50.8ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_organisation_id" ON "groups" USING btree ("organisation_id")[0m
+  [1m[35m (50.8ms)[0m  [1m[35mCREATE  INDEX  "index_groups_on_user_id" ON "groups" USING btree ("user_id")[0m
+  [1m[35m (86.4ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" serial primary key, "company_name" character varying, "position" character varying, "job_description" character varying, "organisation_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (50.4ms)[0m  [1m[35mCREATE  INDEX  "index_jobs_on_organisation_id" ON "jobs" USING btree ("organisation_id")[0m
+  [1m[35m (85.1ms)[0m  [1m[35mCREATE TABLE "membershipdata" ("id" serial primary key, "FirstName" character varying, "LastName" character varying, "YearCompleted" character varying, "Email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "organisation_id" integer, "Organisation" character varying, "WorkPlace" character varying, "PhoneNumber" character varying)[0m
+  [1m[35m (51.0ms)[0m  [1m[35mCREATE  INDEX  "index_membershipdata_on_organisation_id" ON "membershipdata" USING btree ("organisation_id")[0m
+  [1m[35m (94.7ms)[0m  [1m[35mCREATE TABLE "organisations" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "organisation_name" character varying)[0m
+  [1m[35m (52.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_organisations_on_email" ON "organisations" USING btree ("email")[0m
+  [1m[35m (40.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_organisations_on_reset_password_token" ON "organisations" USING btree ("reset_password_token")[0m
+  [1m[35m (94.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "first_name" character varying, "Last_name" character varying, "organisation_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "phone_number" character varying, "profession" character varying, "education" character varying, "skills" character varying, "user_pic" character varying, "YearGroup" character varying)[0m
+  [1m[35m (41.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (41.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (10.1ms)[0m  [1m[35mALTER TABLE "announcements" ADD CONSTRAINT "fk_rails_380d9b2e4b"
+FOREIGN KEY ("organisation_id")
+  REFERENCES "organisations" ("id")
+[0m
+  [1m[35m (10.3ms)[0m  [1m[35mALTER TABLE "events" ADD CONSTRAINT "fk_rails_69d23b5b85"
+FOREIGN KEY ("organisation_id")
+  REFERENCES "organisations" ("id")
+[0m
+  [1m[35m (10.0ms)[0m  [1m[35mALTER TABLE "fundraisings" ADD CONSTRAINT "fk_rails_187001e095"
+FOREIGN KEY ("organisation_id")
+  REFERENCES "organisations" ("id")
+[0m
+  [1m[35m (10.2ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_32205fdfff"
+FOREIGN KEY ("organisation_id")
+  REFERENCES "organisations" ("id")
+[0m
+  [1m[35m (10.5ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "fk_rails_5e78cd340a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (10.4ms)[0m  [1m[35mALTER TABLE "jobs" ADD CONSTRAINT "fk_rails_c6374488d9"
+FOREIGN KEY ("organisation_id")
+  REFERENCES "organisations" ("id")
+[0m
+  [1m[35m (12.3ms)[0m  [1m[35mALTER TABLE "membershipdata" ADD CONSTRAINT "fk_rails_75dc3e98aa"
+FOREIGN KEY ("organisation_id")
+  REFERENCES "organisations" ("id")
+[0m
+  [1m[35m (87.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170727202948)[0m
+  [1m[35m (9.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170722161605),
+(20170702164230),
+(20170727183141),
+(20170702163743),
+(20170717140933),
+(20170727183003),
+(20170726162615),
+(20170708140700),
+(20170726133613),
+(20170708115843),
+(20170722160856),
+(20170708122219),
+(20170708140205),
+(20170708115436),
+(20170726212038),
+(20170702161839),
+(20170708120727),
+(20170716131818),
+(20170709075527),
+(20170702164030),
+(20170717053501);
+
+[0m
+  [1m[35m (85.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-27 08:05:14.242400"], ["updated_at", "2017-10-27 08:05:14.242400"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/organisations/sign_up" for 127.0.0.1 at 2017-10-27 08:05:22 +0000
+Processing by RegistrationsController#new as HTML
+  Rendering organisations/registrations/new.html.erb within layouts/application
+  Rendered organisations/shared/_links.html.erb (2.4ms)
+  Rendered organisations/registrations/new.html.erb within layouts/application (135.3ms)
+Completed 200 OK in 190ms (Views: 143.9ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/assets/logo12341-a931aba3796ea4871c9467fb113f6bc41558295de91b5732e8b40e97df707911.png" for 127.0.0.1 at 2017-10-27 08:05:23 +0000
+Started GET "/organisations/sign_up" for 127.0.0.1 at 2017-10-27 08:06:16 +0000
+Processing by RegistrationsController#new as HTML
+  Rendering organisations/registrations/new.html.erb within layouts/application
+  Rendered organisations/shared/_links.html.erb (1.7ms)
+  Rendered organisations/registrations/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-3628cfec66e5dc7ecfee93ef2bfc36fb1e7b745b84e868b29cc31cb6c7d0d8c1.css" for 127.0.0.1 at 2017-10-27 08:06:16 +0000
+Started GET "/assets/static_pages-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" for 127.0.0.1 at 2017-10-27 08:06:16 +0000
+Started GET "/assets/application-6a0a4c1948e26fc01c3115def2a48c29fe70e51216546f2fe25cd86aa8dc4b47.js" for 127.0.0.1 at 2017-10-27 08:06:16 +0000
+Started GET "/assets/logo12341-a931aba3796ea4871c9467fb113f6bc41558295de91b5732e8b40e97df707911.png" for 127.0.0.1 at 2017-10-27 08:06:17 +0000
+Started GET "/organisations/sign_up" for 127.0.0.1 at 2017-10-27 08:06:47 +0000
+Processing by RegistrationsController#new as HTML
+  Rendering organisations/registrations/new.html.erb within layouts/application
+  Rendered organisations/shared/_links.html.erb (1.4ms)
+  Rendered organisations/registrations/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-3628cfec66e5dc7ecfee93ef2bfc36fb1e7b745b84e868b29cc31cb6c7d0d8c1.css" for 127.0.0.1 at 2017-10-27 08:06:47 +0000
+Started GET "/assets/static_pages-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" for 127.0.0.1 at 2017-10-27 08:06:47 +0000
+Started GET "/assets/application-6a0a4c1948e26fc01c3115def2a48c29fe70e51216546f2fe25cd86aa8dc4b47.js" for 127.0.0.1 at 2017-10-27 08:06:47 +0000
+Started GET "/assets/logo12341-a931aba3796ea4871c9467fb113f6bc41558295de91b5732e8b40e97df707911.png" for 127.0.0.1 at 2017-10-27 08:06:47 +0000
+Started POST "/organisations" for 127.0.0.1 at 2017-10-27 08:11:14 +0000
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "organisation"=>{"organisation_name"=>"org", "email"=>"org@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganisation Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "organisations" WHERE "organisations"."email" = $1 LIMIT $2[0m  [["email", "org@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "organisations" ("email", "encrypted_password", "created_at", "updated_at", "organisation_name") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "org@gmail.com"], ["encrypted_password", "$2a$11$v62aGTcxe3FjN8TuLvHV5eHzSHBIppf77CKdX6N/MzKzTd1agqCcK"], ["created_at", "2017-10-27 08:11:14.368881"], ["updated_at", "2017-10-27 08:11:14.368881"], ["organisation_name", "org"]]
+  [1m[35m (12.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "organisations" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "organisations"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2017-10-27 08:11:14.492768"], ["last_sign_in_at", "2017-10-27 08:11:14.492768"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", "2017-10-27 08:11:14.494292"], ["id", 1]]
+  [1m[35m (22.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 525ms (ActiveRecord: 38.0ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-10-27 08:11:14 +0000
+Processing by OrganisationsController#index as HTML
+  [1m[36mOrganisation Load (0.7ms)[0m  [1m[34mSELECT  "organisations".* FROM "organisations" WHERE "organisations"."id" = $1 ORDER BY "organisations"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering organisations/index.html.erb within layouts/organisations
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "membershipdata" WHERE "membershipdata"."organisation_id" = $1[0m  [["organisation_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "fundraisings" WHERE "fundraisings"."organisation_id" = $1[0m  [["organisation_id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "events" WHERE "events"."organisation_id" = $1[0m  [["organisation_id", 1]]
+  Rendered organisations/index.html.erb within layouts/organisations (90.1ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_topnavbar.html.erb (1.1ms)
+Completed 200 OK in 110ms (Views: 92.7ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/assets/organisations-516f8a27e286895bb4fd8d861fa2f1ffe45f9c37e6a28b364ff7d45a6d3a3224.css" for 127.0.0.1 at 2017-10-27 08:11:14 +0000
+Started GET "/assets/organisations-6d7bd13314a62810ab7f6450ba7f0aaceed9c9c73265659b2769823907066d61.js" for 127.0.0.1 at 2017-10-27 08:11:14 +0000
+Started GET "/assets/logo12342-b895bde8ff87f8910d8aa3d745699b234ede6b4f61de81fcf1aedc45f3ce2a5c.png" for 127.0.0.1 at 2017-10-27 08:11:14 +0000
+Started GET "/assets/ppic1-3796a7f75d1e90ffd857cdcb6d286d38bd3471b3d7f60e2a68ce11b7868139d7.png" for 127.0.0.1 at 2017-10-27 08:11:14 +0000
+Started GET "/assets/logo-mob1-04c43c83c390e597934d09e8c2d950b4074ec854b7bc1a613fc5748e2bca3a1a.png" for 127.0.0.1 at 2017-10-27 08:11:14 +0000
+Started GET "/assets/patterns/header-profile-c05909898218a521d3bd19ba09a9a43338de6de5fdf1d3fc771b0ec28ae416c5.png" for 127.0.0.1 at 2017-10-27 08:11:14 +0000
+Started GET "/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" for 127.0.0.1 at 2017-10-27 08:11:14 +0000
+Started GET "/membershipdata" for 127.0.0.1 at 2017-10-27 08:11:24 +0000
+Processing by MembershipdataController#index as HTML
+  [1m[36mOrganisation Load (0.5ms)[0m  [1m[34mSELECT  "organisations".* FROM "organisations" WHERE "organisations"."id" = $1 ORDER BY "organisations"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering membershipdata/index.html.erb within layouts/organisations
+  [1m[36mMembershipdatum Load (0.3ms)[0m  [1m[34mSELECT "membershipdata".* FROM "membershipdata" WHERE "membershipdata"."organisation_id" = $1[0m  [["organisation_id", 1]]
+  Rendered membershipdata/index.html.erb within layouts/organisations (35.2ms)
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_topnavbar.html.erb (1.5ms)
+Completed 200 OK in 70ms (Views: 50.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/membershipdata-aaa10f6ba1ec3ed4e29536c7eee5fd05478410c36f2769d922558bd914313a93.css" for 127.0.0.1 at 2017-10-27 08:11:25 +0000
+Started GET "/assets/membershipdata-639fba53207843ea1da1c88206379370a9f70842f8e947152fbbf7d40841dfbb.js" for 127.0.0.1 at 2017-10-27 08:11:25 +0000
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2017-10-27 08:11:25 +0000
+Started GET "/organisations/sms" for 127.0.0.1 at 2017-10-27 08:11:31 +0000
+Processing by OrganisationsController#sms as HTML
+  [1m[36mOrganisation Load (0.5ms)[0m  [1m[34mSELECT  "organisations".* FROM "organisations" WHERE "organisations"."id" = $1 ORDER BY "organisations"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering organisations/sms.html.erb within layouts/organisations
+  [1m[36mMembershipdatum Load (0.4ms)[0m  [1m[34mSELECT "membershipdata".* FROM "membershipdata" WHERE "membershipdata"."organisation_id" = $1[0m  [["organisation_id", 1]]
+  Rendered organisations/sms.html.erb within layouts/organisations (8.8ms)
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_topnavbar.html.erb (4.0ms)
+Completed 200 OK in 32ms (Views: 26.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/green.png" for 127.0.0.1 at 2017-10-27 08:11:32 +0000
+Started GET "/fundraisings" for 127.0.0.1 at 2017-10-27 08:11:34 +0000
+Processing by FundraisingsController#index as HTML
+  [1m[36mOrganisation Load (0.8ms)[0m  [1m[34mSELECT  "organisations".* FROM "organisations" WHERE "organisations"."id" = $1 ORDER BY "organisations"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fundraisings/index.html.erb within layouts/organisations
+  [1m[36mFundraising Load (0.4ms)[0m  [1m[34mSELECT "fundraisings".* FROM "fundraisings" WHERE "fundraisings"."organisation_id" = $1[0m  [["organisation_id", 1]]
+  Rendered fundraisings/index.html.erb within layouts/organisations (5.5ms)
+  Rendered layouts/_navigation.html.erb (4.0ms)
+  Rendered layouts/_topnavbar.html.erb (1.2ms)
+Completed 200 OK in 30ms (Views: 20.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/fundraisings-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" for 127.0.0.1 at 2017-10-27 08:11:34 +0000
+Started GET "/assets/fundraisings-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" for 127.0.0.1 at 2017-10-27 08:11:34 +0000
+Started GET "/announcements" for 127.0.0.1 at 2017-10-27 08:11:38 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mOrganisation Load (0.8ms)[0m  [1m[34mSELECT  "organisations".* FROM "organisations" WHERE "organisations"."id" = $1 ORDER BY "organisations"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering announcements/index.html.erb within layouts/organisations
+  [1m[36mAnnouncement Load (0.6ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" WHERE "announcements"."organisation_id" = $1[0m  [["organisation_id", 1]]
+  Rendered announcements/index.html.erb within layouts/organisations (3.2ms)
+  Rendered layouts/_navigation.html.erb (4.3ms)
+  Rendered layouts/_topnavbar.html.erb (1.5ms)
+Completed 200 OK in 37ms (Views: 19.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-10-27 08:11:41 +0000
+Processing by JobsController#index as HTML
+  [1m[36mOrganisation Load (0.8ms)[0m  [1m[34mSELECT  "organisations".* FROM "organisations" WHERE "organisations"."id" = $1 ORDER BY "organisations"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering jobs/index.html.erb within layouts/organisations
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."organisation_id" = $1[0m  [["organisation_id", 1]]
+  Rendered jobs/index.html.erb within layouts/organisations (3.5ms)
+  Rendered layouts/_navigation.html.erb (5.3ms)
+  Rendered layouts/_topnavbar.html.erb (2.2ms)
+Completed 200 OK in 45ms (Views: 21.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/jobs-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" for 127.0.0.1 at 2017-10-27 08:11:41 +0000
+Started GET "/assets/jobs-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" for 127.0.0.1 at 2017-10-27 08:11:41 +0000
+Started GET "/events" for 127.0.0.1 at 2017-10-27 08:11:44 +0000
+Processing by EventsController#index as HTML
+  [1m[36mOrganisation Load (1.0ms)[0m  [1m[34mSELECT  "organisations".* FROM "organisations" WHERE "organisations"."id" = $1 ORDER BY "organisations"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering events/index.html.erb within layouts/organisations
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."organisation_id" = $1[0m  [["organisation_id", 1]]
+  Rendered events/index.html.erb within layouts/organisations (3.4ms)
+  Rendered layouts/_navigation.html.erb (3.7ms)
+  Rendered layouts/_topnavbar.html.erb (1.5ms)
+Completed 200 OK in 29ms (Views: 21.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/organisations/sign_out" for 127.0.0.1 at 2017-10-27 08:12:00 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mOrganisation Load (0.5ms)[0m  [1m[34mSELECT  "organisations".* FROM "organisations" WHERE "organisations"."id" = $1 ORDER BY "organisations"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 25ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-27 08:12:00 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-10-27 08:12:31 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.8ms)
+  Rendered users/registrations/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 56ms (Views: 17.0ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-10-27 08:13:15 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.5ms)
+  Rendered users/sessions/new.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 70ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2017-10-27 08:13:18 +0000
+Processing by Devise::PasswordsController#new as HTML
+  Rendering users/passwords/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (3.2ms)
+  Rendered users/passwords/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-27 08:15:40 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-3628cfec66e5dc7ecfee93ef2bfc36fb1e7b745b84e868b29cc31cb6c7d0d8c1.css" for 127.0.0.1 at 2017-10-27 08:15:40 +0000
+Started GET "/assets/static_pages-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" for 127.0.0.1 at 2017-10-27 08:15:40 +0000
+Started GET "/assets/application-6a0a4c1948e26fc01c3115def2a48c29fe70e51216546f2fe25cd86aa8dc4b47.js" for 127.0.0.1 at 2017-10-27 08:15:40 +0000
+Started GET "/organisations/sign_up" for 127.0.0.1 at 2017-10-27 08:15:43 +0000
+Processing by RegistrationsController#new as HTML
+  Rendering organisations/registrations/new.html.erb within layouts/application
+  Rendered organisations/shared/_links.html.erb (1.8ms)
+  Rendered organisations/registrations/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/organisations/sign_in" for 127.0.0.1 at 2017-10-27 08:15:59 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering organisations/sessions/new.html.erb within layouts/application
+  Rendered organisations/shared/_links.html.erb (2.1ms)
+  Rendered organisations/sessions/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
